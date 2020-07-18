@@ -7,13 +7,13 @@ import java.util.stream.Stream;
 {
     public static void main(String[] args) 
     {
-        List<String> names=Arrays.asList("mom","radar","planet","wow","luck");
+        List<String> names=Arrays.asList("rar","keerthi","shiva","wow","madam");
         
-        Stream<String> s = names.stream().filter(name -> (isItPalindrome(name)));
-        System.out.println(s.collect(Collectors.toList()));
+        Stream<String> pallindrome = names.stream().filter(name -> (isPalindrome(name)));
+        System.out.println(pallindrome.collect(Collectors.toList()));
 
     }
-    public static boolean isItPalindrome(String name)
+    public static boolean isPalindrome(String name)
         {
         String inputString = name.replaceAll("\\s+", "").toLowerCase();
         return  IntStream.range(0, inputString.length()/2).
